@@ -201,3 +201,27 @@ php artisan make:resource UserResource
 ## Toastr
 
 - <a href="https://php-flasher.io/library/toastr/" target="_blank">PHP Flasher</a>
+
+## Fibonacci
+
+ ```bash
+public function generateFibonacci($n)
+    {
+        $a = 0;
+        $b = 1;
+
+        while ($a < $n) {
+            echo $a . ' ';
+            $temp = $a;
+            $a = $b;
+            $b = $temp + $b;
+        }
+
+        echo "\n";
+    }
+
+    public function index()
+    {
+        $this->generateFibonacci(1000);
+    }
+```
